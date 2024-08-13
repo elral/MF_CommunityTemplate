@@ -253,7 +253,7 @@ void MFCustomDevice::update()
 void MFCustomDevice::set(int16_t messageID, char *setPoint)
 {
     if (!_initialized) return;
-
+Serial.print("I am running on Core: "); Serial.println(xPortGetCoreID());
     if (_customType == MY_CUSTOM_DEVICE_1) {
         _mydevice->set(messageID, setPoint);
     } else if (_customType == MY_CUSTOM_DEVICE_2) {
