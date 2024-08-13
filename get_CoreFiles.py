@@ -2,7 +2,8 @@ import os
 
 Import("env")
 
-CORESOURCE = "https://github.com/MobiFlight/MobiFlight-FirmwareSource"
+# CORESOURCE = "https://github.com/MobiFlight/MobiFlight-FirmwareSource"
+CORESOURCE = "https://github.com/elral/MobiFlight-FirmwareSource"
 CORESOURCE_DIR = env.subst("$PROJECT_DIR/src")
 CORESOURCE_TAG = env.GetProjectOption("custom_core_firmware_version")
 print("Compiling for Core Version: " + CORESOURCE_TAG)
