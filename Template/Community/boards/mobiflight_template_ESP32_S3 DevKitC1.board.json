@@ -22,12 +22,23 @@
   "Info": {
     "CanInstallFirmware": true,
     "CanResetBoard": true,
+    "DelayAfterFirmwareUpdate": 0,
     "FirmwareBaseName": "mobiflight_template_esp32s3",
     "FirmwareExtension": "bin",
     "FriendlyName": "ESP32-S3 DevKitC1",
     "LatestFirmwareVersion": "2.5.1",
     "MobiFlightType": "Mobiflight Template ESP32-S3 DevKitC1",
-    "ResetFirmwareFile": "reset.raspberry_pico_flash_nuke.uf2"
+    "ResetFirmwareFile": "reset.raspberry_pico_flash_nuke.uf2",
+    "CustomDeviceTypes": [
+      "MOBIFLIGHT_TEMPLATE",
+      "MOBIFLIGHT_TEMPLATE2"
+    ],
+    "Community": {
+      "Project": "Your Project",
+      "Website": "https://YourWebsite.com",
+      "Docs": "https://YourWebsite.com",
+      "Support": "https://YourWebsite.com"
+    }
   },
   "ModuleLimits": {
     "MaxAnalogInputs": 18,
@@ -40,7 +51,8 @@
     "MaxServos": 10,
     "MaxShifters": 4,
     "MaxSteppers": 10,
-    "MaxInputMultiplexer": 2
+    "MaxInputMultiplexer": 2,
+    "MaxCustomDevices": 5
   },
   "Pins": [
     {
