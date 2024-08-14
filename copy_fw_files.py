@@ -16,6 +16,15 @@ build_path_json = build_path + '/Boards'
 distrubution_path = './_dist'
 board_folder = ['./_Boards/Atmel', './_Boards/RaspberryPi', './_Boards/ESP32']
 platform = env.BoardConfig().get("platform", {})
+# Get the ZIP filename from the build environment.
+community_project = env.GetProjectOption('custom_community_project', "")
+
+# Get the custom folder from the build environment.
+custom_source_folder = env.GetProjectOption('custom_source_folder', "")
+
+# Get the foldername inside the zip file from the build environment.
+community_folder = env.GetProjectOption('custom_community_folder', "")
+
 
 def copy_fw_files (source, target, env):
     fw_file_name=str(target[0])
