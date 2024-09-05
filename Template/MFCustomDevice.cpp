@@ -31,9 +31,9 @@ extern MFEEPROM MFeeprom;
 // reads a string from EEPROM or Flash at given address which is '.' terminated and saves it to the buffer
 bool MFCustomDevice::getStringFromMem(uint16_t addrMem, char *buffer, bool configFromFlash)
 {
-    char     temp    = 0;
-    uint8_t  counter = 0;
-    uint16_t length  = MFeeprom.get_length();
+    char     temp     = 0;
+    uint8_t  counter  = 0;
+    uint16_t length   = MFeeprom.get_length();
     do {
         if (configFromFlash) {
             temp = pgm_read_byte_near(CustomDeviceConfig + addrMem++);
@@ -118,7 +118,7 @@ void MFCustomDevice::attach(uint16_t adrPin, uint16_t adrType, uint16_t adrConfi
         /* **********************************************************************************
             Read the configuration from the EEPROM or Flash, copy it into a buffer.
         ********************************************************************************** */
-        // getStringFromMem(adrConfig, parameter, configFromFlash);
+        getStringFromMem(adrConfig, parameter, configFromFlash);
         /* **********************************************************************************
             Split the config up into single parameter. As the number of parameters could be
             different between multiple devices, it is done here.
@@ -160,7 +160,7 @@ void MFCustomDevice::attach(uint16_t adrPin, uint16_t adrType, uint16_t adrConfi
             Read the pins from the EEPROM or Flash, copy them into a buffer
             If you have set '"isI2C": true' in the device.json file, the first value is the I2C address
         ********************************************************************************************** */
-        // getStringFromMem(adrPin, parameter, configFromFlash);
+        getStringFromMem(adrPin, parameter, configFromFlash);
         /* **********************************************************************************************
             split the pins up into single pins, as the number of pins could be different between
             multiple devices, it is done here
