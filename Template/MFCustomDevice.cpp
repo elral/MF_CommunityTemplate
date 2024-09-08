@@ -118,8 +118,7 @@ void MFCustomDevice::attach(uint16_t adrPin, uint16_t adrType, uint16_t adrConfi
         /* **********************************************************************************
             Read the configuration from the EEPROM or Flash, copy it into a buffer.
         ********************************************************************************** */
-        // Don't use it until it's implemented in the Connector
-        //getStringFromMem(adrConfig, parameter, configFromFlash);
+        getStringFromMem(adrConfig, parameter, configFromFlash);
         /* **********************************************************************************
             Split the config up into single parameter. As the number of parameters could be
             different between multiple devices, it is done here.
@@ -130,10 +129,12 @@ void MFCustomDevice::attach(uint16_t adrPin, uint16_t adrType, uint16_t adrConfi
         ********************************************************************************** */
         uint16_t Parameter1;
         char    *Parameter2;
-        params     = strtok_r(parameter, "|", &p);
-        Parameter1 = atoi(params);
-        params     = strtok_r(NULL, "|", &p);
-        Parameter2 = params;
+        if (parameter[0] != 0x00) {      // ESP32 crashes if params gets not set
+            params     = strtok_r(parameter, "|", &p);
+            Parameter1 = atoi(params);
+            params     = strtok_r(NULL, "|", &p);
+            Parameter2 = params;
+        }
 
         /* **********************************************************************************
             Next call the constructor of your custom device
