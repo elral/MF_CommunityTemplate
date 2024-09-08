@@ -118,7 +118,8 @@ void MFCustomDevice::attach(uint16_t adrPin, uint16_t adrType, uint16_t adrConfi
         /* **********************************************************************************
             Read the configuration from the EEPROM or Flash, copy it into a buffer.
         ********************************************************************************** */
-        getStringFromMem(adrConfig, parameter, configFromFlash);
+        // Don't use it until it's implemented in the Connector
+        //getStringFromMem(adrConfig, parameter, configFromFlash);
         /* **********************************************************************************
             Split the config up into single parameter. As the number of parameters could be
             different between multiple devices, it is done here.
@@ -175,7 +176,8 @@ void MFCustomDevice::attach(uint16_t adrPin, uint16_t adrType, uint16_t adrConfi
         /* **********************************************************************************
             Read the configuration from the EEPROM or Flash, copy it into a buffer.
         ********************************************************************************** */
-        getStringFromMem(adrConfig, parameter, configFromFlash);
+        // Don't use it until it's implemented in the Connector
+        //getStringFromMem(adrConfig, parameter, configFromFlash);
         /* **********************************************************************************
             split the config up into single parameter. As the number of parameters could be
             different between multiple devices, it is done here.
