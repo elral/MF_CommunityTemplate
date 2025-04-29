@@ -19,9 +19,9 @@
     "CanResetBoard": true,
     "FirmwareBaseName": "mobiflight_template_raspberrypico2B_generic",
     "FirmwareExtension": "uf2",
-    "FriendlyName": "Mobiflight Template Pico2B generic",
+    "FriendlyName": "Mobiflight Template Pimoroni PGA2350",
     "LatestFirmwareVersion": "2.5.1",
-    "MobiFlightType": "Mobiflight Template RaspiPico2B generic",
+    "MobiFlightType": "Mobiflight Template Pimoroni PGA2350",
     "ResetFirmwareFile": "reset.arduino_raspberrypico2_1_0_2.uf2",
     "CustomDeviceTypes": [
         "MOBIFLIGHT_TEMPLATE",

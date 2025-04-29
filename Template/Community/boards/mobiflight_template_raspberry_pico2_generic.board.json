@@ -19,9 +19,9 @@
     "CanResetBoard": true,
     "FirmwareBaseName": "mobiflight_template_raspberrypico2_generic",
     "FirmwareExtension": "uf2",
-    "FriendlyName": "MobiFlight RaspiPico2 generic",
+    "FriendlyName": "Mobiflight RaspiPico2 generic",
     "LatestFirmwareVersion": "2.5.1",
-    "MobiFlightType": "MobiFlight RaspiPico2 generic",
+    "MobiFlightType": "Mobiflight RaspiPico2 generic",
     "ResetFirmwareFile": "reset.arduino_raspberrypico2_1_0_2.uf2",
     "CustomDeviceTypes": [
         "MOBIFLIGHT_TEMPLATE",
