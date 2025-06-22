@@ -22,7 +22,7 @@
     "FriendlyName": "Mobiflight Template Pico2B generic",
     "LatestFirmwareVersion": "2.5.1",
     "MobiFlightType": "Mobiflight Template RaspiPico2B generic",
-    "ResetFirmwareFile": "reset.arduino_raspberrypico2_1_0_2.uf2",
+    "ResetFirmwareFile": "reset.raspberry_pico1-2_flash_nuke.uf2",
     "CustomDeviceTypes": [
         "MOBIFLIGHT_TEMPLATE",
         "MOBIFLIGHT_TEMPLATE2"
